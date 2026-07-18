@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ric Stuff — Mi diario de videojuegos, películas, series y libros</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Ric<span>Stuff</span></h1>
+    <p class="subtitle">Mi registro anual de videojuegos, películas, series y libros</p>
+  </header>
+
+  <main>
+    <div class="controls">
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="videojuego">🎮 Videojuegos</button>
+        <button class="filter-btn" data-filter="pelicula">🎬 Películas</button>
+        <button class="filter-btn" data-filter="serie">📺 Series</button>
+        <button class="filter-btn" data-filter="libro">📚 Libros</button>
+      </div>
+
+      <div class="year-select">
+        <label for="year">Año</label>
+        <select id="year"></select>
+      </div>
+    </div>
+
+    <p class="empty-state" id="emptyState" hidden>No hay nada registrado todavía para este filtro.</p>
+
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Hecho a mano · edita <code>js/data.js</code> para agregar más entradas</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

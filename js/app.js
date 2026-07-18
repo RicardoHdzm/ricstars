@@ -1,0 +1,82 @@
+const CATEGORY_LABELS = {
+  videojuego: "Videojuego",
+  pelicula: "Película",
+  serie: "Serie",
+  libro: "Libro"
+};
+
+const grid = document.getElementById("grid");
+const emptyState = document.getElementById("emptyState");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const yearSelect = document.getElementById("year");
+
+let activeFilter = "todos";
+let activeYear = "todos";
+
+function starsMarkup(rating) {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5;
+  let html = "";
+  for (let i = 0; i < 5; i++) {
+    if (i < full) html += '<span class="filled">★</span>';
+    else if (i === full && half) html += '<span class="filled">⯨</span>';
+    else html += '<span class="empty">★</span>';
+  }
+  return html;
+}
+
+function cardMarkup(entry) {
+  const year = entry.fecha ? entry.fecha.slice(0, 4) : "";
+  const fechaLegible = entry.fecha
+    ? new Date(entry.fecha + "T00:00:00").toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" })
+    : "";
+
+  return `
+    <article class="card" data-categoria="${entry.categoria}" data-year="${year}" tabindex="0">
+      <span class="badge ${entry.categoria}">${CATEGORY_LABELS[entry.categoria] || entry.categoria}</span>
+      <img src="${entry.imagen}" alt="${entry.titulo}" loading="lazy">
+      <div class="title-bar">${entry.titulo}</div>
+      <div class="overlay">
+        <div class="overlay-title">${entry.titulo}</div>
+        <div class="stars" aria-label="Puntuación ${entry.puntuacion} de 5">${starsMarkup(entry.puntuacion)}</div>
+        <div class="resena">${entry.resena}</div>
+        ${fechaLegible ? `<div class="fecha">Terminado el ${fechaLegible}</div>` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function populateYears() {
+  const years = [...new Set(entries.map(e => e.fecha ? e.fecha.slice(0, 4) : null).filter(Boolean))].sort((a, b) => b - a);
+  yearSelect.innerHTML = `<option value="todos">Todos</option>` + years.map(y => `<option value="${y}">${y}</option>`).join("");
+}
+
+function render() {
+  const filtered = entries.filter(e => {
+    const matchCat = activeFilter === "todos" || e.categoria === activeFilter;
+    const matchYear = activeYear === "todos" || (e.fecha && e.fecha.slice(0, 4) === activeYear);
+    return matchCat && matchYear;
+  });
+
+  filtered.sort((a, b) => (b.fecha || "").localeCompare(a.fecha || ""));
+
+  grid.innerHTML = filtered.map(cardMarkup).join("");
+  emptyState.hidden = filtered.length !== 0;
+}
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+yearSelect.addEventListener("change", () => {
+  activeYear = yearSelect.value;
+  render();
+});
+
+populateYears();
+render();
