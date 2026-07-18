@@ -16,6 +16,7 @@
   --cat-serie: #6cffb0;
   --cat-trash-tv: #ff6cf0;
   --cat-anime: #c792ea;
+  --cat-musica: #ff5c5c;
   --cat-comida: #ffe66c;
   --cat-otro: #9aa1ac;
 }
@@ -255,6 +256,7 @@ main {
 .badge.serie { color: var(--cat-serie); }
 .badge.trash-tv { color: var(--cat-trash-tv); }
 .badge.anime { color: var(--cat-anime); }
+.badge.musica { color: var(--cat-musica); }
 .badge.comida { color: var(--cat-comida); }
 .badge.otro { color: var(--cat-otro); }
 

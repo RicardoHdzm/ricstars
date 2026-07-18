@@ -6,6 +6,7 @@ const CATEGORY_LABELS = {
   serie: "Serie",
   "trash-tv": "Trash TV",
   anime: "Anime",
+  musica: "Música",
   comida: "Comida",
   otro: "Otro"
 };
@@ -18,6 +19,7 @@ const CATEGORY_ICONS = {
   serie: "fa-solid fa-tv",
   "trash-tv": "fa-solid fa-trash",
   anime: "fa-solid fa-dragon",
+  musica: "fa-solid fa-music",
   comida: "fa-solid fa-utensils",
   otro: "fa-solid fa-ellipsis"
 };
@@ -89,7 +91,8 @@ const GENRE_OPTIONS = {
   libro: ["Ficción", "No ficción", "Fantasía", "Ciencia ficción", "Misterio", "Terror", "Romance", "Biografía", "Autoayuda", "Historia", "Ensayo", "Poesía", "Clásico"],
   pelicula: ["Acción", "Aventura", "Comedia", "Drama", "Terror", "Ciencia ficción", "Fantasía", "Romance", "Suspenso", "Animación", "Documental", "Crimen", "Bélica", "Musical"],
   serie: ["Acción", "Aventura", "Comedia", "Drama", "Terror", "Ciencia ficción", "Fantasía", "Romance", "Suspenso", "Documental", "Crimen", "Sitcom"],
-  anime: ["Shonen", "Shojo", "Seinen", "Josei", "Isekai", "Mecha", "Slice of Life", "Deporte", "Romance", "Comedia", "Terror", "Psicológico", "Fantasía", "Acción", "Drama", "Sobrenatural"]
+  anime: ["Shonen", "Shojo", "Seinen", "Josei", "Isekai", "Mecha", "Slice of Life", "Deporte", "Romance", "Comedia", "Terror", "Psicológico", "Fantasía", "Acción", "Drama", "Sobrenatural"],
+  musica: ["Pop", "Rock", "Hip-Hop", "R&B", "Reggaetón", "Electrónica", "Jazz", "Clásica", "Indie", "Metal", "Punk", "Folk", "Country", "K-Pop", "Latina", "Soul"]
 };
 
 const PLATFORM_LABELS = {};
