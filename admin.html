@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>RicStars — Agregar entrada</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Ric<span>Stars</span></h1>
+    <p class="subtitle">Agregar una entrada nueva</p>
+  </header>
+
+  <main class="admin-main">
+    <a class="back-link" href="index.html">&larr; Volver al diario</a>
+
+    <form class="admin-form" id="addForm">
+      <fieldset>
+        <legend>Tu token de GitHub</legend>
+        <label>
+          Personal access token
+          <input type="password" id="token" placeholder="github_pat_..." autocomplete="off" required>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="rememberToken">
+          Recordar en este navegador
+        </label>
+      </fieldset>
+
+      <label>
+        Título
+        <input type="text" id="titulo" required>
+      </label>
+
+      <label>
+        Categoría
+        <select id="categoria" required>
+          <option value="videojuego">🎮 Videojuego</option>
+          <option value="pelicula">🎬 Película</option>
+          <option value="serie">📺 Serie</option>
+          <option value="libro">📚 Libro</option>
+        </select>
+      </label>
+
+      <label>
+        Reseña
+        <textarea id="resena" required></textarea>
+      </label>
+
+      <label>
+        Puntuación (0.5 a 5)
+        <input type="number" id="puntuacion" min="0.5" max="5" step="0.5" value="5" required>
+      </label>
+      <div class="rating-preview" id="ratingPreview"></div>
+
+      <label>
+        Fecha en que lo terminaste
+        <input type="date" id="fecha" required>
+      </label>
+
+      <label>
+        Imagen de portada
+        <input type="file" id="imagen" accept="image/*" required>
+      </label>
+
+      <button type="submit" id="submitBtn">Publicar entrada</button>
+      <p class="status" id="status"></p>
+    </form>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

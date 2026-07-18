@@ -1,10 +1,3 @@
-const CATEGORY_LABELS = {
-  videojuego: "Videojuego",
-  pelicula: "Película",
-  serie: "Serie",
-  libro: "Libro"
-};
-
 const grid = document.getElementById("grid");
 const emptyState = document.getElementById("emptyState");
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -12,18 +5,6 @@ const yearSelect = document.getElementById("year");
 
 let activeFilter = "todos";
 let activeYear = "todos";
-
-function starsMarkup(rating) {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0.5;
-  let html = "";
-  for (let i = 0; i < 5; i++) {
-    if (i < full) html += '<span class="filled">★</span>';
-    else if (i === full && half) html += '<span class="filled">⯨</span>';
-    else html += '<span class="empty">★</span>';
-  }
-  return html;
-}
 
 function cardMarkup(entry) {
   const year = entry.fecha ? entry.fecha.slice(0, 4) : "";
