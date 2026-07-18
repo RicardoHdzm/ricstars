@@ -1,7 +1,7 @@
 // ============================================================
 // Aquí agregas cada videojuego, película, serie o libro que
-// termines. Copia un bloque { ... } dentro del arreglo `entries`,
-// cambia los datos y listo.
+// termines. Este archivo se actualiza automáticamente desde
+// admin.html — también puedes editarlo a mano si prefieres.
 //
 // categoria: "videojuego" | "pelicula" | "serie" | "libro"
 // puntuacion: número del 1 al 5 (acepta medios puntos, ej. 3.5)
@@ -45,5 +45,14 @@ const entries = [
     resena: "Panorama ambicioso de la historia humana. Algunas ideas son discutibles pero siempre invita a pensar.",
     puntuacion: 4,
     fecha: "2026-04-05"
+  },
+  {
+    id: 5,
+    titulo: "Pikmin 4",
+    categoria: "videojuego",
+    imagen: "assets/img/pikmin-4-5.jpg",
+    resena: "La verdad nunca habia jugado un juego de Pikminm, sin embargo este matuvo entretenido hasta el final. Las areas y las cavernas estan muy bien hechas. Se puede a llegar a sentir un poco lento, pero creo que es parte de.",
+    puntuacion: 3.5,
+    fecha: "2026-07-13"
   }
 ];
