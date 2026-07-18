@@ -72,5 +72,14 @@ const entries = [
     resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto.\n\nEso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto.\n\nIntentaré llegar a Master todas las seasons... hasta que me aburra lol.",
     puntuacion: 5,
     fecha: "2026-04-08"
+  },
+  {
+    id: 8,
+    titulo: "Pokémon Champions",
+    categoria: "videojuego",
+    imagen: "assets/img/pokemon-champions-8.png",
+    resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto. Eso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto. Intentaré llegar a Master todas las seasons... hasta que me aburra lol.",
+    puntuacion: 3,
+    fecha: "2026-04-08"
   }
 ];
