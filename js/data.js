@@ -54,5 +54,14 @@ const entries = [
     resena: "La verdad nunca habia jugado un juego de Pikminm, sin embargo este matuvo entretenido hasta el final. Las areas y las cavernas estan muy bien hechas. Se puede a llegar a sentir un poco lento, pero creo que es parte de.",
     puntuacion: 3.5,
     fecha: "2026-07-13"
+  },
+  {
+    id: 6,
+    titulo: "Pikmin 4",
+    categoria: "videojuego",
+    imagen: "assets/img/pikmin-4-6.jpg",
+    resena: "Siempre quise probar Pikmin, pero me daba flojera al empezar. Al final Pikmin 4 me sorprendió. Le metí 40 horas para sacar el 100% y nunca se me hizo aburrido (tal vez un poco lento). \n\nLa exploración, las cuevas, las misiones de noche y las batallas Dandori lo hacen muy entretenido.",
+    puntuacion: 3.5,
+    fecha: "2026-07-13"
   }
 ];
