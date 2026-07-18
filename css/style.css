@@ -63,7 +63,7 @@ html, body {
   max-width: 70vw;
   max-height: 70vw;
   border-radius: 50%;
-  border: 3px solid #3a3a38;
+  border: 6px solid #3a3a38;
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
@@ -117,6 +117,36 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px 60px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 10px 18px;
+  margin-bottom: 20px;
+  max-width: 360px;
+}
+
+.search-bar i {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+.search-bar input::placeholder {
+  color: var(--text-dim);
 }
 
 .controls {
@@ -547,6 +577,11 @@ main {
   }
   .year-select {
     justify-content: center;
+  }
+  .search-bar {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -2,9 +2,11 @@ const grid = document.getElementById("grid");
 const emptyState = document.getElementById("emptyState");
 const filterButtons = document.querySelectorAll(".filter-btn");
 const yearSelect = document.getElementById("year");
+const searchInput = document.getElementById("searchInput");
 
 let activeFilter = "todos";
 let activeYear = "todos";
+let activeSearch = "";
 
 function metaTagsMarkup(entry) {
   if (entry.categoria === "videojuego" && entry.plataformas && entry.plataformas.length) {
@@ -57,7 +59,8 @@ function render() {
   const filtered = entries.filter(e => {
     const matchCat = activeFilter === "todos" || e.categoria === activeFilter;
     const matchYear = activeYear === "todos" || (e.fecha && e.fecha.slice(0, 4) === activeYear);
-    return matchCat && matchYear;
+    const matchSearch = !activeSearch || e.titulo.toLowerCase().includes(activeSearch);
+    return matchCat && matchYear && matchSearch;
   });
 
   filtered.sort((a, b) => (b.fecha || "").localeCompare(a.fecha || ""));
@@ -77,6 +80,11 @@ filterButtons.forEach(btn => {
 
 yearSelect.addEventListener("change", () => {
   activeYear = yearSelect.value;
+  render();
+});
+
+searchInput.addEventListener("input", () => {
+  activeSearch = searchInput.value.trim().toLowerCase();
   render();
 });
 
