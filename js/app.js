@@ -6,15 +6,24 @@ const yearSelect = document.getElementById("year");
 let activeFilter = "todos";
 let activeYear = "todos";
 
-function platformTagsMarkup(entry) {
-  if (entry.categoria !== "videojuego" || !entry.plataformas || !entry.plataformas.length) return "";
-  const tags = entry.plataformas.map(key => {
-    const label = PLATFORM_LABELS[key] || key;
-    const color = PLATFORM_COLORS[key] || "#9aa1ac";
-    const text = PLATFORM_TEXT_COLORS[key] || "#ffffff";
-    return `<span class="platform-tag" style="--platform-color:${color};--platform-text:${text}">${label}</span>`;
-  }).join("");
-  return `<div class="platform-tags">${tags}</div>`;
+function metaTagsMarkup(entry) {
+  if (entry.categoria === "videojuego" && entry.plataformas && entry.plataformas.length) {
+    const tags = entry.plataformas.map(key => {
+      const label = PLATFORM_LABELS[key] || key;
+      const color = PLATFORM_COLORS[key] || "#9aa1ac";
+      const text = PLATFORM_TEXT_COLORS[key] || "#ffffff";
+      return `<span class="platform-tag" style="--platform-color:${color};--platform-text:${text}">${label}</span>`;
+    }).join("");
+    return `<div class="platform-tags">${tags}</div>`;
+  }
+  if (entry.generos && entry.generos.length) {
+    const color = `var(--cat-${entry.categoria})`;
+    const tags = entry.generos.map(g =>
+      `<span class="platform-tag" style="--platform-color:${color};--platform-text:#1f1f1e">${g}</span>`
+    ).join("");
+    return `<div class="platform-tags">${tags}</div>`;
+  }
+  return "";
 }
 
 function cardMarkup(entry) {
@@ -27,7 +36,7 @@ function cardMarkup(entry) {
     <article class="card" data-categoria="${entry.categoria}" data-year="${year}" tabindex="0">
       <span class="badge ${entry.categoria}"><i class="${CATEGORY_ICONS[entry.categoria] || 'fa-solid fa-tag'}"></i> ${CATEGORY_LABELS[entry.categoria] || entry.categoria}</span>
       <img src="${entry.imagen}" alt="${entry.titulo}" loading="lazy">
-      ${platformTagsMarkup(entry)}
+      ${metaTagsMarkup(entry)}
       <div class="title-bar">${entry.titulo}</div>
       <div class="overlay">
         <div class="overlay-title">${entry.titulo}</div>

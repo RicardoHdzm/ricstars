@@ -444,13 +444,13 @@ main {
   letter-spacing: 0.04em;
 }
 
-.platform-picker .platform-options {
+.platform-options {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.platform-picker label {
+.platform-options label {
   flex-direction: row;
   align-items: center;
   gap: 5px;
@@ -462,7 +462,7 @@ main {
   cursor: pointer;
 }
 
-.platform-picker input {
+.platform-options input {
   width: auto;
   margin: 0;
 }
