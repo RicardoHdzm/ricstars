@@ -74,6 +74,14 @@ const PLATFORM_GROUPS = {
     items: {
       pc: "PC"
     }
+  },
+  mobile: {
+    label: "Móvil",
+    color: "#00b8a9",
+    text: "#ffffff",
+    items: {
+      movil: "Móvil"
+    }
   }
 };
 

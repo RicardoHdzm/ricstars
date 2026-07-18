@@ -399,6 +399,17 @@ main {
 .admin-form .rating-preview .filled { color: var(--star); }
 .admin-form .rating-preview .empty { color: var(--star-dim); }
 
+.char-counter {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: -10px;
+}
+
+.char-counter.limit {
+  color: #ff6c6c;
+}
+
 .admin-form button {
   background: var(--accent);
   color: #16171b;
