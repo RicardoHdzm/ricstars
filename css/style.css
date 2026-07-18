@@ -104,12 +104,6 @@ html, body {
   background: var(--surface-hover);
 }
 
-.timeline-section {
-  max-width: 480px;
-  margin: 0 auto 40px;
-  padding: 0 24px;
-}
-
 main {
   max-width: 1200px;
   margin: 0 auto;
