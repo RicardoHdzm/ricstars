@@ -11,14 +11,4 @@
 // fecha: cuándo lo terminaste, formato AAAA-MM-DD
 // ============================================================
 
-const entries = [
-  {
-    id: 9,
-    titulo: "Star Fox",
-    categoria: "videojuego",
-    imagen: "assets/img/star-fox-9.png",
-    plataformas: ["switch2"],
-    puntuacion: 4.5,
-    fecha: "2026-07-04"
-  }
-];
+const entries = [];
