@@ -12,6 +12,25 @@ const submitBtn = document.getElementById("submitBtn");
 const puntuacionInput = document.getElementById("puntuacion");
 const ratingPreview = document.getElementById("ratingPreview");
 const fechaInput = document.getElementById("fecha");
+const successBanner = document.getElementById("successBanner");
+const successMessage = document.getElementById("successMessage");
+const addAnotherBtn = document.getElementById("addAnotherBtn");
+
+addAnotherBtn.addEventListener("click", () => {
+  const token = tokenInput.value;
+  const remember = rememberToken.checked;
+  form.reset();
+  form.hidden = false;
+  successBanner.hidden = true;
+  setStatus("");
+  fechaInput.valueAsDate = new Date();
+  puntuacionInput.value = 5;
+  updateRatingPreview();
+  if (remember) {
+    tokenInput.value = token;
+    rememberToken.checked = true;
+  }
+});
 
 const savedToken = localStorage.getItem(TOKEN_STORAGE_KEY);
 if (savedToken) {
@@ -163,15 +182,11 @@ form.addEventListener("submit", async (event) => {
       })
     });
 
-    setStatus(`"${titulo}" agregado. GitHub Pages tarda ~30-60s en actualizar.`);
-    form.reset();
-    fechaInput.valueAsDate = new Date();
-    puntuacionInput.value = 5;
-    updateRatingPreview();
-    if (rememberToken.checked) {
-      tokenInput.value = token;
-      rememberToken.checked = true;
-    }
+    setStatus("");
+    successMessage.textContent = `"${titulo}" se guardó correctamente. GitHub Pages tarda ~30-60s en mostrarlo en el sitio — no vuelvas a enviar este formulario para la misma entrada.`;
+    successBanner.hidden = false;
+    form.hidden = true;
+    successBanner.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (err) {
     setStatus(`Error: ${err.message}`, true);
   } finally {
