@@ -42,7 +42,7 @@ function cardMarkup(entry) {
         <div class="overlay-title">${entry.titulo}</div>
         <div class="stars" aria-label="Puntuación ${entry.puntuacion} de 5">${starsMarkup(entry.puntuacion)}</div>
         <div class="resena">${entry.resena}</div>
-        ${fechaLegible ? `<div class="fecha">Terminado el ${fechaLegible}</div>` : ""}
+        ${fechaLegible ? `<div class="fecha">Publicado el ${fechaLegible}</div>` : ""}
       </div>
     </article>
   `;
