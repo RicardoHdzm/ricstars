@@ -65,5 +65,15 @@ const entries = [
     resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto. Eso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto. Intentaré llegar a Master todas las seasons... hasta que me aburra lol.",
     puntuacion: 3,
     fecha: "2026-04-08"
+  },
+  {
+    id: 9,
+    titulo: "Star Fox",
+    categoria: "videojuego",
+    imagen: "assets/img/star-fox-9.png",
+    plataformas: ["switch2"],
+    resena: "Definitivamente es un juegazo. Y para los que dicen que es muy corto tengo algo que decirles: tienen razón lol. La campaña principal dura muy poco, pero recordemos que justamente es un juego arcade. El chiste es sacar todas las medallas, descubrir las rutas alternas, completar todos los desafíos y luego repetir todo en modo Experto. Eso le da muchísima rejugabilidad.",
+    puntuacion: 4.5,
+    fecha: "2026-07-04"
   }
 ];
