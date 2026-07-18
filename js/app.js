@@ -6,6 +6,17 @@ const yearSelect = document.getElementById("year");
 let activeFilter = "todos";
 let activeYear = "todos";
 
+function platformTagsMarkup(entry) {
+  if (entry.categoria !== "videojuego" || !entry.plataformas || !entry.plataformas.length) return "";
+  const tags = entry.plataformas.map(key => {
+    const label = PLATFORM_LABELS[key] || key;
+    const color = PLATFORM_COLORS[key] || "#9aa1ac";
+    const text = PLATFORM_TEXT_COLORS[key] || "#ffffff";
+    return `<span class="platform-tag" style="--platform-color:${color};--platform-text:${text}">${label}</span>`;
+  }).join("");
+  return `<div class="platform-tags">${tags}</div>`;
+}
+
 function cardMarkup(entry) {
   const year = entry.fecha ? entry.fecha.slice(0, 4) : "";
   const fechaLegible = entry.fecha
@@ -14,8 +25,9 @@ function cardMarkup(entry) {
 
   return `
     <article class="card" data-categoria="${entry.categoria}" data-year="${year}" tabindex="0">
-      <span class="badge ${entry.categoria}">${CATEGORY_LABELS[entry.categoria] || entry.categoria}</span>
+      <span class="badge ${entry.categoria}"><i class="${CATEGORY_ICONS[entry.categoria] || 'fa-solid fa-tag'}"></i> ${CATEGORY_LABELS[entry.categoria] || entry.categoria}</span>
       <img src="${entry.imagen}" alt="${entry.titulo}" loading="lazy">
+      ${platformTagsMarkup(entry)}
       <div class="title-bar">${entry.titulo}</div>
       <div class="overlay">
         <div class="overlay-title">${entry.titulo}</div>

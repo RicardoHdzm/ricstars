@@ -5,22 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RicStars — Mi diario de videojuegos, películas, series y libros</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <h1>Ric<span>Stars</span></h1>
-    <p class="subtitle">Mi registro anual de videojuegos, películas, series y libros</p>
+  <header class="profile-header">
+    <img src="assets/img/profile.png" alt="Rick" class="profile-photo">
+    <h1 class="profile-name">Rick</h1>
+    <p class="profile-handle">@xrhxnox</p>
+    <p class="profile-bio">Aquí reseño un chingo de cosas lol</p>
+    <a class="twitter-follow-button" href="https://x.com/xrhxnox" data-show-count="false">
+      <i class="fa-brands fa-x-twitter"></i> Seguir @xrhxnox
+    </a>
   </header>
+
+  <section class="timeline-section">
+    <a class="twitter-timeline" data-theme="dark" data-height="400" data-tweet-limit="3" href="https://twitter.com/xrhxnox?ref_src=twsrc%5Etfw">Tweets by xrhxnox</a>
+  </section>
 
   <main>
     <div class="controls">
       <div class="filters" id="filters">
         <button class="filter-btn active" data-filter="todos">Todos</button>
-        <button class="filter-btn" data-filter="videojuego">🎮 Videojuegos</button>
-        <button class="filter-btn" data-filter="pelicula">🎬 Películas</button>
-        <button class="filter-btn" data-filter="serie">📺 Series</button>
-        <button class="filter-btn" data-filter="libro">📚 Libros</button>
+        <button class="filter-btn" data-filter="videojuego"><i class="fa-solid fa-gamepad"></i> Videojuegos</button>
+        <button class="filter-btn" data-filter="app"><i class="fa-solid fa-mobile-screen-button"></i> Apps</button>
+        <button class="filter-btn" data-filter="libro"><i class="fa-solid fa-book"></i> Libros</button>
+        <button class="filter-btn" data-filter="pelicula"><i class="fa-solid fa-clapperboard"></i> Películas</button>
+        <button class="filter-btn" data-filter="serie"><i class="fa-solid fa-tv"></i> Series</button>
+        <button class="filter-btn" data-filter="trash-tv"><i class="fa-solid fa-trash"></i> Trash TV</button>
+        <button class="filter-btn" data-filter="anime"><i class="fa-solid fa-dragon"></i> Anime</button>
+        <button class="filter-btn" data-filter="comida"><i class="fa-solid fa-utensils"></i> Comida</button>
+        <button class="filter-btn" data-filter="otro"><i class="fa-solid fa-ellipsis"></i> Otros</button>
       </div>
 
       <div class="year-select">
@@ -35,11 +50,12 @@
   </main>
 
   <footer class="site-footer">
-    <p>Hecho a mano · <a href="admin.html">agregar entrada</a></p>
+    <p>Hecho a mano</p>
   </footer>
 
   <script src="js/utils.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
