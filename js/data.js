@@ -63,5 +63,14 @@ const entries = [
     resena: "Siempre quise probar Pikmin, pero me daba flojera al empezar. Al final Pikmin 4 me sorprendió. Le metí 40 horas para sacar el 100% y nunca se me hizo aburrido (tal vez un poco lento). \n\nLa exploración, las cuevas, las misiones de noche y las batallas Dandori lo hacen muy entretenido.",
     puntuacion: 3.5,
     fecha: "2026-07-13"
+  },
+  {
+    id: 7,
+    titulo: "Pokémon Champions",
+    categoria: "videojuego",
+    imagen: "assets/img/pokemon-champions-7.jpg",
+    resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto.\n\nEso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto.\n\nIntentaré llegar a Master todas las seasons... hasta que me aburra lol.",
+    puntuacion: 5,
+    fecha: "2026-04-08"
   }
 ];
