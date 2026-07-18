@@ -436,6 +436,10 @@ main {
   gap: 12px;
 }
 
+.admin-form fieldset[hidden] {
+  display: none;
+}
+
 .admin-form legend {
   padding: 0 6px;
   color: var(--text-dim);
