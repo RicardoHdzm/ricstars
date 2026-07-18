@@ -47,15 +47,6 @@ const entries = [
     fecha: "2026-04-05"
   },
   {
-    id: 5,
-    titulo: "Pikmin 4",
-    categoria: "videojuego",
-    imagen: "assets/img/pikmin-4-5.jpg",
-    resena: "La verdad nunca habia jugado un juego de Pikminm, sin embargo este matuvo entretenido hasta el final. Las areas y las cavernas estan muy bien hechas. Se puede a llegar a sentir un poco lento, pero creo que es parte de.",
-    puntuacion: 3.5,
-    fecha: "2026-07-13"
-  },
-  {
     id: 6,
     titulo: "Pikmin 4",
     categoria: "videojuego",
@@ -65,19 +56,10 @@ const entries = [
     fecha: "2026-07-13"
   },
   {
-    id: 7,
-    titulo: "Pokémon Champions",
-    categoria: "videojuego",
-    imagen: "assets/img/pokemon-champions-7.jpg",
-    resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto.\n\nEso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto.\n\nIntentaré llegar a Master todas las seasons... hasta que me aburra lol.",
-    puntuacion: 5,
-    fecha: "2026-04-08"
-  },
-  {
     id: 8,
     titulo: "Pokémon Champions",
     categoria: "videojuego",
-    imagen: "assets/img/pokemon-champions-8.png",
+    imagen: "assets/img/pokemon-champions-8.jpg",
     resena: "Champions facilita demasiado entrar al competitivo. La jugabilidad está muy bien porque al final siguen siendo las batallas clásicas de Pokémon, un sistema que para mí ya está casi perfecto. Eso sí, por momentos se siente como un juego hecho solo para cumplir, y en lo técnico y gráfico queda bastante corto. Intentaré llegar a Master todas las seasons... hasta que me aburra lol.",
     puntuacion: 3,
     fecha: "2026-04-08"
