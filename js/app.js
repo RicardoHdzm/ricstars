@@ -90,3 +90,5 @@ searchInput.addEventListener("input", () => {
 
 populateYears();
 render();
+
+document.getElementById("copyrightYear").textContent = new Date().getFullYear();
