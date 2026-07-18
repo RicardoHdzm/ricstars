@@ -12,25 +12,4 @@
 // fecha: cuándo lo terminaste, formato AAAA-MM-DD
 // ============================================================
 
-const entries = [
-  {
-    id: 1,
-    titulo: "Yours Truly",
-    categoria: "libro",
-    imagen: "assets/img/yours-truly-1.jpg",
-    generos: ["Romance"],
-    resena: "Es un libro muy lindo. Me encantaron los protagonistas, la ambientacion y las frases.\n\n\"No recuerdo ninguna frase\"",
-    puntuacion: 5,
-    fecha: "2024-07-01"
-  },
-  {
-    id: 2,
-    titulo: "The O.C. (Temporada 1)",
-    categoria: "serie",
-    imagen: "assets/img/the-o-c-temporada-1-2.jpg",
-    generos: ["Drama"],
-    resena: "Es como la cuarta vez que la veo y apenas noto que Seth es una basura.",
-    puntuacion: 5,
-    fecha: "2026-04-01"
-  }
-];
+const entries = [];
