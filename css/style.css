@@ -58,12 +58,14 @@ html, body {
 }
 
 .profile-photo {
-  width: 96px;
-  height: 96px;
+  width: 288px;
+  height: 288px;
+  max-width: 70vw;
+  max-height: 70vw;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
 }
 
 .profile-name {
@@ -84,7 +86,7 @@ html, body {
   color: var(--text);
 }
 
-.twitter-follow-button {
+.x-follow-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -98,7 +100,7 @@ html, body {
   transition: background 0.15s ease;
 }
 
-.twitter-follow-button:hover {
+.x-follow-btn:hover {
   background: var(--surface-hover);
 }
 
