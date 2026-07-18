@@ -536,4 +536,15 @@ main {
     gap: 14px;
   }
   .site-header h1 { font-size: 1.8rem; }
+
+  .controls {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .filters {
+    justify-content: center;
+  }
+  .year-select {
+    justify-content: center;
+  }
 }
